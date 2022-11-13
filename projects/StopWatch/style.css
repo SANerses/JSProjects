@@ -1,0 +1,157 @@
+/* -------reset------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------main------ */
+html {
+    font-size: 20px;
+}
+
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 330px;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+#time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 3rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding: 1.5rem;
+    border-bottom: 5px solid #1C1C1E;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.btnContainer {
+    border-radius: 50%;
+    border: 5px solid #092911;
+    padding: 0.5rem;
+}
+
+.secondaryBtnContainer {
+    border-color: #1C1C1E;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btnContainer .btn{
+    background-color: #092911;
+    color: #176427;
+    border: none;
+}
+
+.secondaryBtnContainer .btn {
+    background-color: #1C1C1E;
+    color: white;
+}
+
+.errorBtnContainer {
+    border: 5px solid  #340E0B;
+}
+
+.errorBtnContainer .btn {
+    background-color: #340E0B;
+    color: red;
+}
+
+#laps {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Mobile */
+/* @media(min-width: 480px) */
+
+/* Tablet */
+@media(min-width: 768px){
+    html {
+        font-size: 30px;
+    }
+}
+
+/* # Desktop */
+@media(min-width: 992px){
+    html {
+        font-size: 40px;
+    }
+
+    .actions {
+        width: 400px;
+    }
+}
+
+/* Huge */
+/* only screen and (min-width: 1280px) */
