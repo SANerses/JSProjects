@@ -25,3 +25,20 @@ Timer Application
 - Start, Stop functionality
 - Collect fixed times by clicking `lap` button
 - Reset laps by clicking `reset` button
+
+---
+
+## 3. Hangman
+
+Select a letter to figure out a hidden word in a set amount of chances
+
+### Project Specifications
+
+- Display hangman pole and figure using SVG
+- Generate a random word
+- Display word in UI with correct letters
+- Display wrong letters
+- Animate svg items when the letter is wrong
+- Show notification when select a letter twice
+- Show popup on win or lose
+- Play again button to reset game
