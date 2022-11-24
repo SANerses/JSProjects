@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Enter a letter</p>
+    <div class="container">
+        <svg height="310" width="500"style="stroke:white" id="tools">
+            <line x1="20" y1="230" x2="100" y2="230"/>
+            <line x1="60" y1="20" x2="60" y2="230"/>
+            <line x1="60" y1="20" x2="140" y2="20"/>
+            <line x1="140" y1="20" x2="140" y2="52"/>
+            <circle cx="140" cy="72" r="20" stroke="white" 
+                stroke-width="2" fill="#34495e" class="head"/>
+            <line x1="140" y1="92" x2="140" y2="150" class="back"/>
+            <line x1="140" y1="120" x2="100" y2="90" class="rigth-arm"/>
+            <line x1="140" y1="120" x2="180" y2="90" class="left-arm"/> 
+            <line x1="140" y1="150" x2="100" y2="190" class="rigth-foot"/>
+            <line x1="140" y1="150" x2="180" y2="190" class="left-foot"/> 
+        </svg>
+    </div>    
+    <div id="wrongLatters"></div>
+    <div id="finalResult"></div>
+    <div id="popup-container">
+        <div class="popup">
+            <h2 id="popupTitle"></h2>
+            <button id="play-button">Play Again</button>
+        </div>
+    </div>
+    <div class="notification" id="notification">
+        <p class="description">You have already entered this letter</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
