@@ -59,3 +59,18 @@ Game where you control a paddle with the arrow keys to bounce a ball up to break
 - Keep score
 - Add rules button with slider
 - Add functionality to change horizontal direction of ball depends on player rectangle hitting possition side
+
+---
+
+## 5. Speech Text Reader
+
+A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
+
+## Project Specifications
+
+- Create responsive UI (CSS Grid) with picture buttons
+- Speaks the text when button clicked
+- Drop down custom text to speech
+- Speaks the text typed in
+- Change voices and accents
+- toggle slider button with animation
