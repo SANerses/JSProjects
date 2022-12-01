@@ -42,3 +42,20 @@ Select a letter to figure out a hidden word in a set amount of chances
 - Show notification when select a letter twice
 - Show popup on win or lose
 - Play again button to reset game
+
+---
+
+## 4. Breakout! Game
+
+Game where you control a paddle with the arrow keys to bounce a ball up to break bricks. This app uses the HTML5 canvas element and API
+
+### Project Specifications
+
+- Draw elements on canvas
+- Use canvas paths to draw shapes
+- Add animation with requestAnimationFrame(cb)
+- Move paddle on arrow key press
+- Add collision detection
+- Keep score
+- Add rules button with slider(-)
+- Add functionality to change horizontal direction of ball depends on player rectangle hitting possition side (-)
