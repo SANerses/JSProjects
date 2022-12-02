@@ -1,10 +1,13 @@
 function main(){
+    const rulesBtn = document.getElementById('rules-btn');
+    const closeBtn = document.getElementById('close-btn');
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
     const popup = document.getElementById('popup-container');
     const playAgainBtn = document.getElementById('play-button');
     const scoreSpan = document.getElementById('scoreSpan');
 
+    const DEFAULT_BALL_DIFF = 4;
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
     let playerDirection;
@@ -36,16 +39,16 @@ function main(){
         player = {
             x: 270,
             y: 380,
-            width: 70,
+            width: 75,
             height: 10,
-            dx: 5 
+            dx: 5, 
         };
         ball = {
             x: 305,
             y: 350,
             radius: 8,
-            dx: 4,
-            dy: 4,
+            dx: DEFAULT_BALL_DIFF,
+            dy: DEFAULT_BALL_DIFF,
         };
         bricks = {
             rows: 7,
@@ -119,14 +122,22 @@ function main(){
         }
 
         if(ball.y <= ball.radius) {
-            ball.dy = -Math.abs(ball.dy);
-        } else if (
-            ball.x - ball.radius > player.x
-            && ball.x <= player.x + player.width
-            && ball.y + ball.radius >= player.y
-        ) {
-            ball.dy = Math.abs(ball.dy);
-        }
+            ball.dy = -DEFAULT_BALL_DIFF;
+         } else if (
+             ball.x - ball.radius > player.x
+             && ball.x <= player.x + player.width
+             && ball.y + ball.radius >= player.y
+         ) {
+             ball.dy = DEFAULT_BALL_DIFF;
+
+             if (ball.x < player.x + (player.width / 3)) {
+                ball.dx = -DEFAULT_BALL_DIFF;
+             } else if (ball.x < player.x + player.width - (player.width / 3)) {
+                ball.dx = 0;
+             } else {
+                ball.dx = DEFAULT_BALL_DIFF;
+             }
+         }
 
         bricksArr.forEach((col) => {
             col.forEach((brick) => {
@@ -164,7 +175,7 @@ function main(){
     playAgainBtn.addEventListener('click', () => {
         popup.classList.remove('open');
         start();
-     });
+    });
 
     function render() {
         context.clearRect(0, 0, canvas.width, canvas.height);
@@ -176,7 +187,7 @@ function main(){
     function renderPlayer() {
         context.beginPath();
         context.rect(player.x, player.y, player.width, player.height);
-        context.fillStyle = 'black';
+        context.fillStyle = 'aqua';
         context.fill();
         context.closePath();
     }
@@ -184,7 +195,7 @@ function main(){
     function renderBall() {
         context.beginPath();
         context.arc(ball.x, ball.y, ball.radius, 0, 2 * Math.PI);
-        context.fillStyle = 'black';
+        context.fillStyle = 'aqua';
         context.fill();
         context.closePath();
     }
@@ -240,6 +251,23 @@ function main(){
         document.removeEventListener('keydown', handleKeydown);
         document.removeEventListener('keyup', handleKeyup);
     }
+
+    function handleOpenBtn(){
+        isRunning = false;
+        rules.classList.add('show');
+    }
+
+    function handleCloseBtn(){
+        rules.classList.remove('show');
+        isRunning = true;
+
+        setTimeout(() => {
+            requestAnimationFrame(game);
+        }, 500)
+    }
+
+    rulesBtn.addEventListener('click', handleOpenBtn);
+    closeBtn.addEventListener('click', handleCloseBtn);
 
     start();
 }

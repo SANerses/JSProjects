@@ -57,5 +57,5 @@ Game where you control a paddle with the arrow keys to bounce a ball up to break
 - Move paddle on arrow key press
 - Add collision detection
 - Keep score
-- Add rules button with slider(-)
-- Add functionality to change horizontal direction of ball depends on player rectangle hitting possition side (-)
+- Add rules button with slider
+- Add functionality to change horizontal direction of ball depends on player rectangle hitting possition side
