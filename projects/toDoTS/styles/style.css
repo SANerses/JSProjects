@@ -1,0 +1,260 @@
+/* -------reset------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --blueviolet:blueviolet;
+    --white:#fff;
+    --aqua:aqua;
+	--red:rgb(255, 25, 0);
+}
+
+/*-------main----->*/
+
+.container {
+	width: 300px;
+	margin: 2rem;
+}
+
+.inputContainer {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newText {
+	width: 260px;
+	font-size: 1rem;
+    font-family: sans-serif;
+	padding: 0.5rem;
+}
+
+.error {
+	border: 2px solid var(--red);
+	color: var(--red);
+}
+
+.show {
+	display: flex;
+}
+
+.listItem {
+	list-style:none;
+	margin: 0.3rem 0;
+	padding: 0.4rem;
+	border:1px solid;
+	border-radius: 3px;
+	display: flex;
+	justify-content:space-between;
+    font-size: 1rem;
+    font-family: sans-serif;
+	cursor: pointer;
+}
+
+.fixedItem {
+	text-decoration: line-through;
+}
+
+.iconContainer {
+    width: 24px;
+	min-width: 24px;
+    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addbtn {
+	background-color: var(--blueviolet);
+	color: var(--white);
+	cursor: pointer;
+	border: 5px solid var(--blueviolet);
+	border-radius: 3px;
+	margin-left: .5rem;
+}
+
+#addbtn:hover {
+	transform: scale(1.1);
+}
+
+.plus.icon {
+	color: white;
+	position: relative;
+	width: 15px;
+	min-width: 15px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.plus.icon:before {
+	content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 14px;
+    height: 2px;
+    background-color: currentColor;
+}
+
+.plus.icon:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 9px;
+	width: 14px;
+	height: 2px;
+	background-color: currentColor;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.deleteBtn {
+	background-color: var(--red);
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 0 0.1rem;
+}
+
+.deleteBtn:hover {
+	transform: scale(1.1);
+}
+
+.trash-solid.icon {
+	color: hsl(0, 8%, 95%);
+	position: absolute;
+	margin-left: auto;
+	width: 9px;
+	height: 10px;
+	border-left: solid 1px currentColor;
+	border-right: solid 1px currentColor;
+	border-bottom: solid 1px currentColor;
+	border-radius: 0 0 2px 2px;
+	background-color: currentColor;
+}
+
+.trash-solid.icon:before {
+	content: '';
+	position: absolute;
+	left: -4px;
+	top: 0px;
+	width: 17px;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.trash-solid.icon:after {
+	content: '';
+	position: absolute;
+	left: -1px;
+	top: -3px;
+	width: 9px;
+	height: 2px;
+	border-left: solid 1px currentColor;
+	border-right: solid 1px currentColor;
+	border-top: solid 1px currentColor;
+	background-color: currentColor;
+	border-radius: 4px 4px 0 0;
+}
+
+.important {
+	color: var(--aqua);
+}
+
+.importantBtn {
+	background-color: var(--aqua);
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.importantBtn:hover{
+	transform: scale(1.1);
+}
+
+.paperclip.icon {
+	color: #000;
+	position: absolute;
+	margin-left: auto;
+	width: 6px;
+	height: 17px;
+	border-radius: 13px 12px 0 0;
+	border-left: solid 1px currentColor;
+	border-right: solid 1px currentColor;
+	border-top: solid 1px currentColor;
+	-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+}
+
+.paperclip.icon:before {
+	content: '';
+	position: absolute;
+	top: 11px;
+	left: -1px;
+	width: 4px;
+	height: 6px;
+	border-radius: 0 0 3px 3px;
+	border-left: solid 1px currentColor;
+	border-right: solid 1px currentColor;
+	border-bottom: solid 1px currentColor;
+}
+
+.paperclip.icon:after {
+	content: '';
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 2px;
+	height: 10px;
+	border-radius: 4px 4px 0 0;
+	border-left: solid 1px currentColor;
+	border-right: solid 1px currentColor;
+	border-top: solid 1px currentColor;
+}
