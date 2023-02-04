@@ -74,3 +74,17 @@ A text to speech app for non-verbal people. Pre-made buttons and custom text spe
 - Speaks the text typed in
 - Change voices and accents
 - toggle slider button with animation
+---
+
+## 6. Todo List
+
+TodoList application for adding, removing and editing todo items
+
+## Project Specifications
+
+- Integrate Typescript
+- Create Todo list page
+- Create button for adding new todo
+- Ability to edit and remove todo item
+- Ability to set importand or make todo done
+- Save state into storage to use it after page reload
