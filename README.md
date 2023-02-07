@@ -88,3 +88,18 @@ TodoList application for adding, removing and editing todo items
 - Ability to edit and remove todo item
 - Ability to set importand or make todo done
 - Save state into storage to use it after page reload
+
+---
+
+## 7. Memory Cards
+
+Flash card app for learning. Display, add and remove memory cards with questions and answers
+
+## Project Specifications
+
+- Create flip cards using CSS
+- Create "Add new card" overlay with form
+- Display question cards and flip for answer
+- View prev and next cards
+- Add new cards to local storage
+- Clear all cards from local storage
