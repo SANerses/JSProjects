@@ -15,8 +15,6 @@ const state = {
   elements: [],
 }
 
-setupListeners();
-
 class CardItem {
   constructor(question, answer) {
     this.question = question;
@@ -141,21 +139,6 @@ function handleArrowRight(){
   }
 }
 
-nextBtn.addEventListener('click', handleArrowRight);
-
-prevBtn.addEventListener('click', handleArrowLeft);
-
-showBtn.addEventListener('click', () => {
-  addContainer.classList.add('show')
-  questionEl.focus();
-});
-
-closeBtn.addEventListener('click', () => {
-  addContainer.classList.remove('show');
-  questionEl.value = '';
-  answerEl.value = '';
-});
-
 function handleAddNewCard(){
   const question = questionEl.value;
   const answer = answerEl.value;
@@ -206,29 +189,42 @@ function setupListeners() {
   });
   addCardBtn.addEventListener('click', handleAddNewCard);
   questionEl.addEventListener('input', handleInputChange);
-}
 
-clearBtn.addEventListener('click', () => {
-  state.elements = [...state.elements.slice(0, state.activeIndex), ...state.elements.slice(state.activeIndex + 1)];
+  nextBtn.addEventListener('click', handleArrowRight);
+
+  prevBtn.addEventListener('click', handleArrowLeft);
+
+  showBtn.addEventListener('click', () => {
+    addContainer.classList.add('show')
+    questionEl.focus();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    addContainer.classList.remove('show');
+    questionEl.value = '';
+    answerEl.value = '';
+  });
   
-  if (state.activeIndex > state.elements.length - 1) {
-    state.activeIndex = state.elements.length - 1;
-  }
-  resetElementsClasses();
-  setCardsData(state.elements);
-  render();
-});
+  clearBtn.addEventListener('click', () => {
+    state.elements = [...state.elements.slice(0, state.activeIndex), ...state.elements.slice(state.activeIndex + 1)];
+    
+    if (state.activeIndex > state.elements.length - 1) {
+      state.activeIndex = state.elements.length - 1;
+    }
+    resetElementsClasses();
+    setCardsData(state.elements);
+    render();
+  });
 
-document.onkeydown = handleEvent;
-
-function handleEvent(e){
-
-  if (e.keyCode == '37') {
-    handleArrowLeft();
-  }
-  else if (e.keyCode == '39') {
-    handleArrowRight();
-  }
+  document.addEventListener("keydown", (event) => {
+    if (event.key === 'ArrowLeft') {
+      handleArrowLeft();
+    }
+    else if(event.key === 'ArrowRight'){
+      handleArrowRight();
+    }
+  });
 }
 
 initCardsData();
+setupListeners();
