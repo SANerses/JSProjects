@@ -74,6 +74,7 @@ A text to speech app for non-verbal people. Pre-made buttons and custom text spe
 - Speaks the text typed in
 - Change voices and accents
 - toggle slider button with animation
+ 
 ---
 
 ## 6. Todo List
@@ -103,3 +104,16 @@ Flash card app for learning. Display, add and remove memory cards with questions
 - View prev and next cards
 - Add new cards to local storage
 - Clear all cards from local storage
+
+---
+
+## 8. New Year Countdown
+
+Landing page that counts down from the current date to the next new year
+
+## Project Specifications
+
+- Create landing page with HTML/CSS
+- Calculate the days, hours, mins and seconds to the new year
+- Insert values into the DOM
+- Show the coming year in the background
