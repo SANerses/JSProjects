@@ -81,6 +81,10 @@ A text to speech app for non-verbal people. Pre-made buttons and custom text spe
 
 TodoList application for adding, removing and editing todo items
 
+>   cd projects/ToDoTS
+
+>   tsc
+
 ### Project Specifications
 
 - Integrate Typescript
