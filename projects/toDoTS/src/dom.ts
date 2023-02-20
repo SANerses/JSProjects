@@ -45,7 +45,7 @@ function handleAddNewTodo() {
     const newVal = DOM_STATE.newTextInput.value;
     const listItems = getTodos();
 
-    if (newVal && !listItems.some(({ text }) => text === newVal)) {
+    if (newVal.trim() && !listItems.some(({ text }) => text === newVal)) {
         addTodo(newVal);
         DOM_STATE.newTextInput.classList.remove('error');
         DOM_STATE.newTextInput.value = '';
