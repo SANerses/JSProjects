@@ -66,7 +66,7 @@ Game where you control a paddle with the arrow keys to bounce a ball up to break
 
 A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
 
-## Project Specifications
+### Project Specifications
 
 - Create responsive UI (CSS Grid) with picture buttons
 - Speaks the text when button clicked
@@ -81,7 +81,7 @@ A text to speech app for non-verbal people. Pre-made buttons and custom text spe
 
 TodoList application for adding, removing and editing todo items
 
-## Project Specifications
+### Project Specifications
 
 - Integrate Typescript
 - Create Todo list page
@@ -96,7 +96,7 @@ TodoList application for adding, removing and editing todo items
 
 Flash card app for learning. Display, add and remove memory cards with questions and answers
 
-## Project Specifications
+### Project Specifications
 
 - Create flip cards using CSS
 - Create "Add new card" overlay with form
@@ -111,7 +111,7 @@ Flash card app for learning. Display, add and remove memory cards with questions
 
 Landing page that counts down from the current date to the next new year
 
-## Project Specifications
+### Project Specifications
 
 - Create landing page with HTML/CSS
 - Calculate the days, hours, mins and seconds to the new year
@@ -124,7 +124,7 @@ Landing page that counts down from the current date to the next new year
 
 Project to teach high order array methods and DOM manipulation
 
-## Project Specifications
+### Project Specifications
 
 - Fetch random users from the randomuser.me API 
 - Use forEach() to loop and output user/wealth
@@ -132,5 +132,25 @@ Project to teach high order array methods and DOM manipulation
 - Use filter() to filter only millionaires
 - Use sort() to sort by wealth
 - Use reduce() to add all wealth
+
+---
+
+## 10. Movie Seat Booking
+
+Display movie choices and seats in a theater to select from in order to purchase tickets
+
+>   cd projects/Booking
+
+>   tsc
+
+### Project Specifications
+
+- Display UI with movie select, screen, seats, legend & seat info
+- User can select a movie/price
+- Each movie/price option can have different holl with different count of seats
+- User can select/deselect seats
+- User can not select occupied seats
+- Number of seats and price will update
+- Save seats, movie and price to local storage so that UI is still populated on refresh
 
 ---

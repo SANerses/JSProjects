@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Movie Seat Booking</title>
+</head>
+<body>
+    <div class="movie-container">
+        <label>Pick a movie:</label>
+        <select id="seanse-select">
+        </select>
+    </div>
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+           <small id="smal">N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small id="smal">Selected</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small id="smal">Occupied</small>
+        </li>
+    </ul>
+    <div class="container">
+        <div class="screen"></div>
+        <div class="sections">
+            <div id="leftSection" class="section">
+            </div>
+            <div id="centerSection" class="section">
+            </div>
+            <div id="rightSection" class="section">
+            </div>
+        </div>
+    </div>
+    <p class="text">
+       You have selected <span id="count"></span> seats for a proce of $<span id="total"> </span>    
+    </p>
+    <script src="./dist/script.js" type="module"></script>
+</body>
+</html>
