@@ -170,3 +170,17 @@ Select currencies to get the exchange rate for a specific amount
 - Display the values for both currencies
 - Update values on amount change
 - Ability to swap currencies
+
+---
+
+## 12. Meal Finder App
+
+Search and generate random meals from the themealdb.com API
+
+### Project Specifications
+
+- Display UI with a form to search and a button to generate
+- Connect to API and get meals
+- Display meals in DOM with image and hover effect
+- Click on meal and see the details
+- Click on generate button to fetch & display a random meal
