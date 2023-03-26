@@ -158,3 +158,15 @@ Display movie choices and seats in a theater to select from in order to purchase
 - Save seats, movie and price to local storage so that UI is still populated on refresh
 
 ---
+
+## 11. Exchange Rate
+
+Select currencies to get the exchange rate for a specific amount
+
+### Project Specifications
+
+- Display UI with 2 selects for currencies and 2 inputs for amounts
+- Fetch exchange rates from API (https://api.exchangerate-api.com)
+- Display the values for both currencies
+- Update values on amount change
+- Ability to swap currencies

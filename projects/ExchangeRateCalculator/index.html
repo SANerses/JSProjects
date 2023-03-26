@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exchange Rate Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <img src="img/logo.png" alt="" id="logo-img" />
+    <h1>Exchange Rate Calculator</h1>
+    <p>Choose the currency and the amounts to get the exchange rate</p>
+    <div class="container">
+      <div id="spinnerContainer">
+        <p class="spinner" id="spinner"><i class="fa fa-spinner fa-5x"></i></p>
+      </div>
+      <div class="currencyContainer">
+        <select id="currency-one" class="currencySelect">
+        </select>
+        <input
+          class="currencyInput"
+          type="number"
+          id="amount-one"
+          placeholder="0"
+          value="1"
+        />
+      </div>
+      <div class="swap-rate-container">
+        <button id="swap">
+          Swap
+        </button>
+        <div id="rate"></div>
+      </div>
+      <div class="currencyContainer">
+        <select id="currency-two" class="currencySelect">
+        </select>
+        <input
+          class="currencyInput"
+          type="number"
+          id="amount-two"
+          placeholder="0"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

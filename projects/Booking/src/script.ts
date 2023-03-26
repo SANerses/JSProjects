@@ -148,20 +148,20 @@ if (sections) {
     sections.addEventListener('click', (e: Event) => {
         const target: HTMLElement = (e.target as HTMLElement);
         if (target.dataset.id && state.currentSeanse) {
-             if (!state.currentSeanse.ocupiedItems.includes(target.dataset.id)) {
-                 if (state.currentSeanse.selectedItems.includes(target.dataset.id)) {
-                     state.currentSeanse.selectedItems = state.currentSeanse.selectedItems
-                         .filter((el) => (el !== target.dataset.id));
-                 } else {
-                     state.currentSeanse.selectedItems = [
-                         ...state.currentSeanse.selectedItems,
-                         target.dataset.id,
-                     ];
-                 }
-     
-                 target.classList.toggle('selected');
-                 update();
-             }
+            if (!state.currentSeanse.ocupiedItems.includes(target.dataset.id)) {
+                if (state.currentSeanse.selectedItems.includes(target.dataset.id)) {
+                    state.currentSeanse.selectedItems = state.currentSeanse.selectedItems
+                        .filter((el) => (el !== target.dataset.id));
+                } else {
+                    state.currentSeanse.selectedItems = [
+                        ...state.currentSeanse.selectedItems,
+                        target.dataset.id,
+                    ];
+                }
+
+                target.classList.toggle('selected');
+                update();
+            }
         } 
-     });
+    });
 }
